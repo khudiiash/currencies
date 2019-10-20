@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  </head>
+  <body>
+      <div id='currencies' onclick="clearConverter()">
+
+        
+
+      </div>
+    
+    <!-- Converter-->
+   
+    <div class='row_converter'>
+      <div class="left converter" id='left-converter'>
+          <div class="left currencies"><a>USD</a><a>EUR</a><a>UAH</a><a>RUB</a><a>PLN</a></div>
+          <div class='left sum' id='left-sum'><input maxlength ='9' type='number' oninput="maxLengthCheck(this)" id="left-input" min='1' max="999" placeholder="USD" onkeydown="convertCurrencies(this)"></input></div>
+      </div>  
+      
+        <div class="converted-price">
+          <h2 class='converted_sum' id='converted-h2'><img id='exchange' width=45 height=25 class='exchange-img' src="assets/images/exchange.svg" alt=""></h2>
+        </div>
+        <div class="right converter" id='right-converter'>
+            <div class="right currencies"><a>USD</a><a>EUR</a><a>UAH</a><a>RUB</a><a>PLN</a></div>
+            <div class='right sum' id='right-sum'><input maxlength ='9' type='number' id="right-input" min='1' max="999"  placeholder="UAH" onkeydown="convertCurrencies(this)"></input></div>
+        </div>  
+          
+    </div>
+
+
+    <script src='index.js'></script>
+  </body>
+</html>
